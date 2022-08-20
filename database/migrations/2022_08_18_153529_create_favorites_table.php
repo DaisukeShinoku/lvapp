@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('favorites', function (Blueprint $table) {
             $table->BigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('CASCADE')->onDelete('CASCADE');
-            $table->tinyInteger('course_id');
+            $table->smallInteger('course_id');
             $table->foreign('course_id')->references('course_id')->on('courses')->onUpdate('CASCADE')->onDelete('CASCADE');
             $table->primary(['user_id', 'course_id']);
             $table->timestamps();

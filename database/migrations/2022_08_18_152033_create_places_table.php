@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('places', function (Blueprint $table) {
-            $table->tinyInteger('place_id')->primary()->comment('場所ID');
+            $table->smallInteger('place_id')->primary()->comment('場所ID');
             $table->string('name')->comment('場所名');
             $table->timestamps();
         });
