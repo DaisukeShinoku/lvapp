@@ -21,6 +21,9 @@
                         </div>
                     @endif
                     <h1>出発地を選択</h1>
+                    @if (!session('status'))
+                    <h1>hogehoge</h1>
+                    @endif
                     <h5>30分以内のスポットをオススメするよ！</h5>
                     <select class="form-select" aria-label="Default select example">
                         <option value="1" selected>新宿駅</option>
